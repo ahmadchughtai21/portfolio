@@ -1,0 +1,17 @@
+# Future RAG dependencies — install when you're ready to wire up
+# the real vector store + LLM calls.
+#
+#   pip install -r requirements-rag.txt
+#
+# The factory in app.services.rag.factory will pick these up
+# automatically once RAG_PROVIDER=vector in your .env.
+
+# ─── Vector store ─────────────────────────────────────────────
+chromadb>=0.5.0
+
+# ─── LLM providers ────────────────────────────────────────────
+openai>=1.54.0
+google-generativeai>=0.8.0
+
+# ─── Local embeddings (optional, swap for hosted if you prefer) ─
+sentence-transformers>=3.2.0

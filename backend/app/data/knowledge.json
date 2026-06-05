@@ -1,0 +1,116 @@
+[
+  {
+    "id": "about",
+    "keywords": [
+      "about", "who", "whoami", "yourself", "introduce", "bio", "summary",
+      "background", "name", "person", "tell me about yourself",
+      "who are you", "what do you do"
+    ],
+    "answer": "I'm Muhammad Ahmad Chughtai, a Full-Stack AI Application Engineer based in Lahore, Pakistan. I build AI-driven web applications — robust async backends, focused frontends, and the careful work in between. Currently finishing my BSCS at UMT while building personal projects on the side."
+  },
+  {
+    "id": "experience",
+    "keywords": [
+      "experience", "years", "how long", "history", "senior", "junior",
+      "level", "tenure", "career", "self-building"
+    ],
+    "answer": "I've been building software for about 3 years on my own. Most of it is Django + React with a heavy AI bent: multimodal pipelines, RAG systems, and the async plumbing that keeps fast UIs snappy when the AI work is slow."
+  },
+  {
+    "id": "stack",
+    "keywords": [
+      "stack", "tech", "technology", "technologies", "tools",
+      "your stack", "your tech", "what do you use",
+      "what's your stack", "whats your stack"
+    ],
+    "answer": "Full-stack by default. Python (Django + DRF, FastAPI) on the backend, React 18 + Vite + Tailwind on the frontend, and a heavy AI layer (RAG, ChromaDB, Gemini, OpenAI, Groq). PostgreSQL for data, Docker + Railway/Vercel for hosting, GSAP when something needs to move."
+  },
+  {
+    "id": "python",
+    "keywords": [
+      "python", "django", "drf", "rest framework", "flask", "fastapi",
+      "backend", "server", "api", "pydantic"
+    ],
+    "answer": "Python is my default backend weapon. Most of my recent work uses Django 5 with DRF, JWT auth, Celery for background work, and Pydantic-shaped validation. I care about request budgets — the AI calls happen off the request path so the user-facing endpoint stays under 500ms."
+  },
+  {
+    "id": "javascript",
+    "keywords": [
+      "javascript", "js", "ts", "typescript", "react", "vite", "frontend",
+      "ui", "web", "next", "tailwind", "css"
+    ],
+    "answer": "React 18 + Vite for production frontends, Tailwind + CSS variables for styling. I lean on async/await throughout, use React Query or SWR for server state, and keep components small enough that prop-drilling never gets out of hand."
+  },
+  {
+    "id": "ai",
+    "keywords": [
+      "ai", "artificial intelligence", "llm", "rag", "gemini", "openai",
+      "groq", "chroma", "chromaDB", "embedding", "vector", "agent",
+      "agentic", "pipeline", "machine learning", "ml", "prompt"
+    ],
+    "answer": "I build RAG systems, async LLM pipelines, and tool-using agents. My current stack: Groq + Gemini + OpenAI in a fallback rotation, ChromaDB for vector storage, Gemini embeddings, and WeasyPrint for PDF generation. I handle rate limits and context formatting deliberately — the goal is outputs that don't make things up."
+  },
+  {
+    "id": "database",
+    "keywords": [
+      "database", "db", "data", "sql", "postgres", "postgresql", "sqlite",
+      "redis", "schema", "orm", "pgvector"
+    ],
+    "answer": "PostgreSQL for production, SQLite for local dev. I model relationships deliberately — TackTack alone has tables for daily-to-yearly recurrence, hierarchical subtasks, and per-user isolation. ORM is Django's, and I reach for raw SQL when the query plan matters."
+  },
+  {
+    "id": "devops",
+    "keywords": [
+      "docker", "compose", "aws", "gcp", "cloud", "railway", "vercel",
+      "deploy", "deployment", "hosting", "ci", "cd", "pipeline", "linux",
+      "infrastructure"
+    ],
+    "answer": "Docker + Docker Compose for local parity, Railway + Vercel for hosting small services, Linux (Arch + Ubuntu) for day-to-day. I keep the multi-container topology honest — Django, frontend, ChromaDB, and a worker all run as separate services in compose."
+  },
+  {
+    "id": "projects",
+    "keywords": [
+      "project", "projects", "built", "build", "building", "made", "make",
+      "created", "app", "apps", "application", "work", "portfolio",
+      "whiteboard", "tacktack", "your projects", "your work", "your apps",
+      "what have you built", "things you built", "show me your projects"
+    ],
+    "answer": "Two personal projects: whiteboard (multimodal AI study app — Gemini turns lecture audio, photos, and PDFs into Markdown notes, with a RAG chat panel) and tacktack (AI task manager — natural-language scheduling via Groq, hierarchical subtasks, per-user data isolation). Both are deployed."
+  },
+  {
+    "id": "contact",
+    "keywords": [
+      "contact", "email", "reach", "touch", "talk", "message", "hire",
+      "hiring", "available", "availability", "open", "freelance",
+      "contract", "internship", "opportunity", "opportunities",
+      "get in touch", "how to contact", "how do i contact",
+      "open to work", "available for work", "looking for work",
+      "your email", "your contact", "reach you", "talk to you"
+    ],
+    "answer": "Best way to reach me: ahmadchughtai21@gmail.com. I'm open to internships, freelance and contract work. Comfortable integrating into teams or taking full ownership of a build. I usually reply within a day."
+  },
+  {
+    "id": "location",
+    "keywords": [
+      "location", "where", "based", "from", "city", "country", "remote",
+      "timezone", "pakistan", "lahore", "utc"
+    ],
+    "answer": "Lahore, Pakistan. Comfortable working remote-first with US and EU time zones; happy to overlap a few hours daily."
+  },
+  {
+    "id": "education",
+    "keywords": [
+      "education", "degree", "university", "college", "student", "study",
+      "umt", "bscs", "courses", "coursework"
+    ],
+    "answer": "BSCS at the University of Management and Technology (UMT), Lahore — 2023 to present. Coursework spans Deep Learning, OS, Algorithms, Data Structures, and Databases."
+  },
+  {
+    "id": "spoken",
+    "keywords": [
+      "speak", "language", "languages", "english", "urdu", "communicate",
+      "communication", "fluent", "native"
+    ],
+    "answer": "I work in English day-to-day. I'm a native Urdu speaker too, happy to take meetings in either."
+  }
+]
