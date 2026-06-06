@@ -36,7 +36,7 @@ export function Projects() {
         </Reveal>
 
         <Reveal
-          className="grid auto-rows-[minmax(360px,auto)] grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 md:auto-rows-[380px]"
+          className="grid auto-rows-[minmax(360px,auto)] grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 md:auto-rows-[minmax(380px,auto)]"
           stagger={0.1}
         >
           {PROJECTS.map((p) => (
