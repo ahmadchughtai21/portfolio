@@ -79,10 +79,12 @@ function ProjectCard({ project }: { project: Project }) {
         className="mt-6 h-px w-full bg-gradient-to-r from-transparent via-void-line-strong to-transparent"
       />
 
-      {/* BOTTOM: meta · title · blurb · tags · source. Grows to fill
-          remaining card height so the source button always sits at the
-          bottom edge with consistent spacing across cards. */}
-      <div className="relative z-10 mt-4 flex flex-1 flex-col">
+      {/* BOTTOM: meta · title · blurb · tags. Grows to fill remaining
+          card height. The Source button is a direct child of the card
+          root (below) so it can stack at z-30 above the full-card
+          overlay (z-10) without being trapped in this section's
+          stacking context. */}
+      <div className="relative mt-4 flex flex-1 flex-col">
         <div className="flex items-center justify-between text-[10.5px] font-mono uppercase tracking-[0.18em] text-ink-mute">
           <span>{project.id}</span>
           <span>{project.year}</span>
@@ -93,32 +95,35 @@ function ProjectCard({ project }: { project: Project }) {
         <p className="mt-2 text-[13.5px] leading-[1.65] text-ink-soft">
           {project.blurb}
         </p>
-        <div className="mt-auto flex flex-wrap items-center justify-between gap-3 pt-5">
-          <ul className="flex flex-wrap gap-1.5">
-            {project.tags.map((t) => (
-              <li
-                key={t}
-                className="rounded-full border border-void-line-strong bg-void/40 px-2.5 py-1 font-mono text-[10px] text-ink-soft"
-              >
-                {t}
-              </li>
-            ))}
-          </ul>
-          {project.github && (
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noreferrer"
-              aria-label={`${project.title} — source`}
-              data-cursor="hover"
-              className="relative z-20 inline-flex items-center gap-1.5 rounded-full border border-void-line-strong bg-void/40 px-3 py-1 font-mono text-[10.5px] uppercase tracking-[0.16em] text-ink-soft transition-all duration-300 hover:border-[var(--color-accent)] hover:text-[var(--color-accent-bright)] hover:shadow-[0_0_18px_-4px_var(--color-accent-glow)]"
+        <ul className="mt-auto flex flex-wrap gap-1.5 pt-5">
+          {project.tags.map((t) => (
+            <li
+              key={t}
+              className="rounded-full border border-void-line-strong bg-void/40 px-2.5 py-1 font-mono text-[10px] text-ink-soft"
             >
-              <GithubMark className="h-3.5 w-3.5" />
-              Source
-            </a>
-          )}
-        </div>
+              {t}
+            </li>
+          ))}
+        </ul>
       </div>
+
+      {/* Source button — direct child of the card root, absolutely
+          positioned in the bottom-right so it stacks unambiguously
+          above the full-card overlay (z-10) and opens the GitHub
+          repo instead of the live demo. */}
+      {project.github && (
+        <a
+          href={project.github}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={`${project.title} — source`}
+          data-cursor="hover"
+          className="absolute bottom-6 right-6 z-30 inline-flex items-center gap-1.5 rounded-full border border-void-line-strong bg-void-elev/80 px-3 py-1.5 font-mono text-[10.5px] uppercase tracking-[0.16em] text-ink-soft backdrop-blur-sm transition-all duration-300 hover:border-[var(--color-accent)] hover:text-[var(--color-accent-bright)] hover:shadow-[0_0_18px_-4px_var(--color-accent-glow)] sm:bottom-7 sm:right-7"
+        >
+          <GithubMark className="h-3.5 w-3.5" />
+          Source
+        </a>
+      )}
 
       {/* Full-card overlay link — captures clicks on whitespace (z-10) so
           the user lands on the live demo. The Source button above (z-20)
