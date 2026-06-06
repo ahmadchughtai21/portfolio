@@ -33,6 +33,6 @@ export const PROJECTS: Project[] = [
     year: '2024',
     visual: 'grid',
     href: 'https://tack.ahmadchughtai.me',
-    github: 'https://github.com/ahmadchughtai21/tacktack',
+    github: 'https://github.com/ahmadchughtai21/ai_todo',
   },
 ]
